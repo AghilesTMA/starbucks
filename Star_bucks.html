@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="star_bucks.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Star bucks</title>
+</head>
+<body>
+    <div class="circle"></div>
+    <!-- Navbar part -->
+    <nav>
+        <a href="#"><img src="/imgs/logo.png" alt="logo"></a>
+        <ul>
+            <li><span>Home</span></li>
+            <li><span>Menu</span></li>
+            <li><span>What's new</span></li>
+            <li><span>Contact us</span></li>
+        </ul>
+    </nav>
+    <!-- Body part -->
+    <div class="content">
+        <div class="para">
+            <p class="p1">It's not just coffe it's <h1>Starbucks</h1></p>
+            <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, quam cupiditate temporibus perferendis doloremque expedita voluptatibus, nemo neque praesentium dolore incidunt molestiae deleniti vel est ea id a molestias quidem.</p>
+            <br>
+            <a href="#">See more</a>
+        </div>
+        <div id="img"><img id="image" src="./imgs/img1.png" alt="coffe"></div>
+        <ul>
+            <li><img src="/imgs/facebook.png" alt="facebook"></li>
+            <li><img src="/imgs/instagram.png" alt="instagram"></li>
+            <li><img src="/imgs/twitter.png" alt="twitter"></li>
+        </ul>
+    </div>
+    <footer>
+        <div class="cups">
+            <ul>
+                <li><img src="./imgs/thumb1.png" onclick="change_cup('./imgs/img1.png');change_theme1()" alt="cup1"></li>
+                <li><img src="./imgs/thumb2.png" onclick="change_cup('./imgs/img2.png');change_theme2()" alt="cup2"></li>
+                <li><img src="./imgs/thumb3.png" onclick="change_cup('./imgs/img3.png');change_theme3()" alt="cup3"></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        function change_cup(cup){
+            let cupimg=document.getElementById('image');
+            cupimg.src = cup;
+        }
+        
+        var root = document.querySelector(':root');
+
+        function change_theme1(){
+            var rootstyles = getComputedStyle(root);
+            root.style.setProperty('--color','#00704A');
+            root.style.setProperty('--hover','#038e60');    
+        }
+
+        function change_theme2(){
+            var rootstyles = getComputedStyle(root);
+            root.style.setProperty('--color','#eb7495');
+            root.style.setProperty('--hover','#f097b0');
+        }
+        function change_theme3(){
+            var rootstyles = getComputedStyle(root);
+            root.style.setProperty('--color','#d752b1');
+            root.style.setProperty('--hover','#d669b7');
+        }
+    </script>
+
+</body>
+</html>

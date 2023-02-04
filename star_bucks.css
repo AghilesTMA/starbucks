@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    box-sizing: border-box;
+}
+
+/* Navbar part */
+:root{
+    --color:#00704A;
+    --hover:#038e60;
+}
+nav{
+
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+nav ul li{
+    list-style: none;
+    margin: 0 10px;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+    
+}
+nav ul li>span::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: var(--color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .2s;
+}
+nav ul li:hover span::after{
+    width: 100%;
+}
+nav ul>li:hover{
+    color: var(--color);
+}
+
+nav img{
+    width: 80px;
+    height: 80px;
+}
+/* Body part */
+.content{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 70vh;
+    margin-top: 20px;
+    padding: 0 20px;
+    position: relative;
+}
+.para{
+    max-width: 500px;
+    margin-top: 40px;
+}
+#img{
+    position: relative;
+}
+#img img{
+    height: 350px;
+    position: absolute;
+    right: 60px;
+}
+.p1{
+    font-size: 40px;
+}
+.p1 +h1{
+    color: var(--color);
+    font-size: 40px;
+}
+.para a{
+    text-decoration: none;
+    height: 30px;
+    width: 120px;
+    background-color: var(--color);
+    padding: 10px;
+    color: white;
+    border-radius: 25px;
+}
+.para a:hover{
+    background-color: var(--hover);
+}
+.content ul{
+    position: fixed;
+    right: 25px;
+    top: 35%;
+    display: flex;
+    flex-direction: column;
+
+}
+.content ul li{
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+    filter: invert(1);
+}
+.content ul li img{
+    height: 20px;
+    width: 20px;
+}
+.content ul li:hover{
+    transform: translate(-5px,0);
+}
+/* Footer part */
+footer{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+}
+.cups{
+    width: 20%;
+}
+footer ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+footer ul li{
+    list-style: none;
+    transition: .3s;
+    cursor: pointer;
+}
+footer ul li img{
+    height: 50px;
+}
+.cups ul li:hover {
+    transform: translateY(-15px);
+}
+.circle{
+    background-color: var(--color);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    clip-path: circle(50% at right 600px);
+}
