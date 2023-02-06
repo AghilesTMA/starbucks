@@ -5,7 +5,7 @@ cupImg.forEach((cup)=>
 {
     cup.addEventListener("click",()=>{
         let cupname=cup.getAttribute(
-            "src"
+            "src" 
         );
 
         change_cup(cupname);
